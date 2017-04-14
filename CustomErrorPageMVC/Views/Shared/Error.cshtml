@@ -1,0 +1,31 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h4>
+Error Page
+        </h4>
+    </div>
+</div>
+<!-- /.row -->
+<!-- Content Row -->
+<div class="row">
+    <div class="col-lg-12">
+        An error is occurred during request.
+        <img src="~/img/soccer_red.jpeg" />
+
+        @if (Model != null)
+        {
+            <div>
+                @Model.Exception.Message
+                <br />
+                @Model.ControllerName
+            </div>
+        }
+    </div>
+</div>
